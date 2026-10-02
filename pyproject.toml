@@ -1,0 +1,13 @@
+[project]
+name = "calculator"
+version = "0.1.0"
+description = "Typed multifunction calculator for IE Python I"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
