@@ -58,7 +58,7 @@ def main():
             print("Result:", multiply(a, b))
         elif choice == "4":
             if b == 0:
-                print("You can't divide by zero. Undefined")
+                print("You can't divide by zero! Undefined!")
             else:
                 print("Result:", divide(a, b))
 
