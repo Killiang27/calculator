@@ -1,4 +1,4 @@
-"""Tests for src/calculator.py.
+"""Tests for calculator.py.
 
 Run with:  uv run python -m tests.test_calculator
 (or, if pytest is installed:  uv run pytest)
@@ -6,7 +6,7 @@ Run with:  uv run python -m tests.test_calculator
 
 import math
 
-from src.calculator import add, divide, multiply, subtract
+from calculator import add, divide, multiply, subtract
 
 
 def test_add() -> None:

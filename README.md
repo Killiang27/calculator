@@ -6,9 +6,7 @@ A typed, menu-driven calculator for IE Python I (Session 1). It adds, subtracts,
 
 ```
 calculator/
-├── main.py                  # menu loop: reads input, prints results
-├── src/
-│   └── calculator.py        # add, subtract, multiply, divide (pure, typed functions)
+├── calculator.py            # the four operations + the menu loop
 ├── tests/
 │   └── test_calculator.py   # normal and boundary-case tests
 ├── data/                    # reserved for future data files
@@ -29,7 +27,7 @@ uv sync
 ## Run
 
 ```bash
-uv run main.py
+uv run calculator.py
 ```
 
 Choose 1 to 4 for an operation, enter two numbers, and 5 to exit.
@@ -42,6 +40,6 @@ uv run python -m tests.test_calculator
 
 ## Design choices
 
-- **Logic separated from input/output.** The operations in `src/calculator.py` never call `input()` or `print()`, so they can be tested directly and reused elsewhere.
-- **Division by zero raises `ValueError`** instead of returning 0. A silent 0 would look like a real result in a financial report; an error makes the problem visible, and the menu turns it into a friendly message.
-- **Invalid input is retried, not fatal.** Typing letters instead of a number asks again rather than crashing.
+- **Logic separated from input/output.** The four operations never call `input()` or `print()`; only `main()` talks to the user. That keeps the maths easy to test and reuse.
+- **Division by zero raises `ValueError`** instead of returning 0. A silent 0 would look like a real result in a financial report; an error makes the problem visible, and the menu checks for zero first and shows a friendly message.
+- **Invalid input never crashes the program.** Typing letters instead of a number shows a message and goes back to the menu.
