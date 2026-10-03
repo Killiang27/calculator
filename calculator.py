@@ -26,7 +26,7 @@ def divide(a: float, b: float) -> float:
         ValueError: If b is zero.
     """
     if b == 0:
-        raise ValueError("Cannot divide by zero.")
+        raise ValueError("Cannot divide by zero! Undefined!")
     return a / b
 
 
