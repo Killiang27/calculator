@@ -1,23 +1,18 @@
-"""Menu-driven calculator for IE Python I.
-
-Run with:  uv run calculator.py
+"""Calculator for IE Python I.
+Type in 'uv run calculator.py' please to get it running!
 """
-
 
 def add(a: float, b: float) -> float:
     """Return a + b."""
     return a + b
 
-
 def subtract(a: float, b: float) -> float:
     """Return a - b."""
     return a - b
 
-
 def multiply(a: float, b: float) -> float:
     """Return a * b."""
     return a * b
-
 
 def divide(a: float, b: float) -> float:
     """Return a / b.
@@ -28,7 +23,6 @@ def divide(a: float, b: float) -> float:
     if b == 0:
         raise ValueError("Cannot divide by zero! Undefined!")
     return a / b
-
 
 def main():
     while True:
@@ -61,7 +55,6 @@ def main():
                 print("You can't divide by zero! Undefined!")
             else:
                 print("Result:", divide(a, b))
-
 
 if __name__ == "__main__":
     main()
