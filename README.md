@@ -8,6 +8,7 @@ calculator/
 -> tests/ -> test_calculator.py # normal and boundary-case tests
 -> data/                        # reserved for future data files
 -> pyproject.toml               # project metadata (uv)
+-> Notebooks                    # Notebooks for assignments
 -> uv.lock                      # dependencies
 -> .python-version              # self explanatory
 -> README.md
